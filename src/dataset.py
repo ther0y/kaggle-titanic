@@ -1,5 +1,6 @@
 import numpy as np  # linear algebra
 import pandas as pd  # data processing, CSV file I/O (e.g. pd.read_csv)
+from sklearn.ensemble import RandomForestClassifier
 
 import os
 
@@ -25,8 +26,6 @@ men = train_data.loc[train_data.Sex == "male"]["Survived"]
 rate_men = sum(men) / len(men)
 
 print("% of men who survived:", rate_men)
-
-from sklearn.ensemble import RandomForestClassifier
 
 y = train_data["Survived"]
 
